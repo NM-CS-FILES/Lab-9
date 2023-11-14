@@ -2,6 +2,9 @@
 
 #pragma once
 
+// represents a basic inventory using some iterator
+// type checking is not performed, sorry :(
+
 template<typename IterT>
 class inventory {
 public:
@@ -11,7 +14,7 @@ public:
 	virtual bool remove(int number) = 0;
 	virtual bool update(const record& rec) = 0;
 
-	virtual IterT begin() = 0;
-	virtual IterT end() = 0;
-	virtual IterT find(int number) = 0;
+	virtual iterator begin() = 0;
+	virtual iterator end() = 0;
+	virtual iterator find(int number) = 0;
 };
