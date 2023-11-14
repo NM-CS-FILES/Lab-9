@@ -5,12 +5,12 @@ I'm not trying to over-engineer or
 be crazy with my implementation,
 this just seemed like the laziest approach,
 or maybe just the most abstract and oo'd.
-Better than rewriting the same code 5 fuckin times.
+Better than rewriting the same code 5 times.
 
-Anyways excuse the language, it's now 6:50am
+it's now 6:50am,
 previous abstractions failed, now I'm left with this
 I'm adding sparse documentation now, maybe it would have been
-easier to just write the same code 5 "fuckin" times
+easier to just write the same code 5 times
 
 Fun Note, just read "Would your conclusion change if you used a doubly-linked list?",
 I've not been using `std::forward_list` and will not at this point.
