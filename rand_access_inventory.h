@@ -4,6 +4,11 @@
 #pragma once
 
 
+// wow, where do I begin, this class
+// was made to provide iterator-like
+// access to a file stream, treating
+// it more like an array
+
 class rand_access_inventory_value {
 	std::fstream& m_fio;
 	size_t m_idx;
@@ -23,8 +28,13 @@ public:
 	}
 };
 
-//
-//
+
+// as far as I know file streams do
+// not have iterators, this class
+// attempts to change that, it keeps
+// a pointer to a file stream and it's
+// index, again treating the stream as
+// an array
 
 class rand_access_inventory_iterator {
 	std::fstream* m_fio;
@@ -52,8 +62,9 @@ public:
 	);
 };
 
-//
-//
+
+// specialization of inventory that deals
+// with file streams
 
 class rand_access_inventory : public inventory<rand_access_inventory_iterator> {
 	std::fstream m_fio;
