@@ -2,6 +2,11 @@
 
 #pragma once
 
+// a specific inventory that acts on a
+// standard container, because of this
+// the linear search can be implemented
+// on a very abstract level
+
 template<typename Container>
 class container_inventory : public inventory<typename Container::iterator> {
 public:
