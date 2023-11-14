@@ -46,6 +46,12 @@ struct record {
 };
 
 
+// Prints records in a similiar style to 
+// the text in tabeltop.pdf. The escaped 
+// characters are part of the extended ascii
+// box characters supported by the windows command prompt
+// lots of lambdas, more so because I couldn't think
+// of a proper place to put functions
 
 template<typename InIter>
 void record_print_all(InIter begin, InIter end) {
@@ -59,6 +65,8 @@ void record_print_all(InIter begin, InIter end) {
 	printf(top);
 	printf("\xBA Record \xB3         Name         \xB3 Quantity \xB3  Cost  \xBA\n");
 
+	// center text for some string size
+	
 	auto center = [](string name, size_t size) {
 		if (size < name.size())
 			name.resize(size);
@@ -77,6 +85,8 @@ void record_print_all(InIter begin, InIter end) {
 		return name;
 	};
 
+	// format fixed point integer as dollars and cents
+	
 	auto format_cost = [](int cost) {
 		int sz = snprintf(nullptr, 0, "%d.%02d", cost / 100, cost % 100);
 		string cost_buf(sz, ' ');
