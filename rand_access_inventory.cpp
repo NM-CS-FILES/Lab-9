@@ -45,10 +45,10 @@ rand_access_inventory_iterator& rand_access_inventory_iterator::operator--() {
 	return *this;
 }
 
-rand_access_inventory_iterator& rand_access_inventory_iterator::operator--(int) {
+rand_access_inventory_iterator rand_access_inventory_iterator::operator--(int) {
 	rand_access_inventory_iterator cpy = *this;
 	--(*this);
-	return *this;
+	return cpy;
 }
 
 bool operator==(
