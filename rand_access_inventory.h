@@ -49,7 +49,7 @@ public:
 	rand_access_inventory_iterator& operator++();
 	rand_access_inventory_iterator operator++(int);
 	rand_access_inventory_iterator& operator--();
-	rand_access_inventory_iterator& operator--(int);
+	rand_access_inventory_iterator operator--(int);
 
 	friend bool operator==(
 		const rand_access_inventory_iterator& l,
